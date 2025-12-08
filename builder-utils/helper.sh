@@ -42,8 +42,8 @@ MakeModule() {
 
 Finalize() {
 	# generate module version file
-	mkdir -p "$MODULEPATH"/packages/etc/porteux
-	echo $MODULENAME.xzm:$(date +%Y%m%d) > "$MODULEPATH"/packages/etc/porteux/$MODULENAME.ver
+	mkdir -p "$MODULEPATH"/packages/etc/skycair
+	echo $MODULENAME.xzm:$(date +%Y%m%d) > "$MODULEPATH"/packages/etc/skycair/$MODULENAME.ver
 
 	# create module
 	MakeModule "$MODULEPATH"/packages/ "$MODULEPATH"/$MODULENAME-$PORTEUXBUILD-$(date +%Y%m%d).xzm

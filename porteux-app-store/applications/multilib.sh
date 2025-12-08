@@ -1,7 +1,7 @@
 #!/bin/bash
 
 CURRENTPACKAGE=multilib
-PORTEUXFULLVERSION=$(cat /etc/porteux-version)
+PORTEUXFULLVERSION=$(cat /etc/skycair-version)
 PORTEUXVERSION=${PORTEUXFULLVERSION#*-}
 PORTEUXVERSION=${PORTEUXVERSION%%-*} 
 
@@ -14,7 +14,7 @@ else
     SLACKWAREVERSION=stable
 fi
 
-APPLICATIONURL="https://github.com/porteux/porteux/releases/download/$PORTEUXVERSION/$CURRENTPACKAGE-$SLACKWAREVERSION.zip"
+APPLICATIONURL="https://github.com/skycair/skycair/releases/download/$PORTEUXVERSION/$CURRENTPACKAGE-$SLACKWAREVERSION.zip"
 OUTPUTDIR="$PORTDIR/optional/"
 BUILDDIR="/tmp/$CURRENTPACKAGE-builder"
 MODULEDIR="$BUILDDIR/$CURRENTPACKAGE-module"

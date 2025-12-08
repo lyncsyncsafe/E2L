@@ -42,7 +42,7 @@ cp "$TEMPDIR"/usr/share/pixmaps/* "$MODULEDIR/usr/share/pixmaps"
 MODULEFILENAME="$CURRENTPACKAGE-$VERSION-$ARCH.xzm"
 ACTIVATEMODULE=$([[ "$@" == *"--activate-module"* ]] && echo "--activate-module")
 
-/opt/porteux-scripts/porteux-app-store/module-builder.sh "$MODULEDIR" "$OUTPUTDIR/$MODULEFILENAME" "$ACTIVATEMODULE"
+/opt/skycair-scripts/skycair-app-store/module-builder.sh "$MODULEDIR" "$OUTPUTDIR/$MODULEFILENAME" "$ACTIVATEMODULE"
 
 # cleanup
 rm -fr "$TEMPDIR" 2> /dev/null

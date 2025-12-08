@@ -8,6 +8,6 @@ FULLVERSION=$(curl -s https://api.github.com/repos/cemu-project/Cemu/tags | grep
 VERSION="${FULLVERSION//[vV]}"
 ACTIVATEMODULE=$([[ "$@" == *"--activate-module"* ]] && echo "--activate-module")
 
-RESULT=$(/opt/porteux-scripts/porteux-app-store/appimage-builder.sh "$CURRENTPACKAGE" "$FRIENDLYNAME" "$CATEGORY" "$APPLICATIONURL" "$VERSION" "$ACTIVATEMODULE")
+RESULT=$(/opt/skycair-scripts/skycair-app-store/appimage-builder.sh "$CURRENTPACKAGE" "$FRIENDLYNAME" "$CATEGORY" "$APPLICATIONURL" "$VERSION" "$ACTIVATEMODULE")
 
 echo "$RESULT"

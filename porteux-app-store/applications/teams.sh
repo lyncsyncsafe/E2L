@@ -8,6 +8,6 @@ VERSION="${FULLVERSION//[vV]}"
 APPLICATIONURL="https://github.com/IsmaelMartinez/teams-for-linux/releases/latest/download/teams-for-linux-${VERSION}.AppImage"
 ACTIVATEMODULE=$([[ "$@" == *"--activate-module"* ]] && echo "--activate-module")
 
-RESULT=$(/opt/porteux-scripts/porteux-app-store/appimage-builder.sh "$CURRENTPACKAGE" "$FRIENDLYNAME" "$CATEGORY" "$APPLICATIONURL" "$VERSION" "$ACTIVATEMODULE")
+RESULT=$(/opt/skycair-scripts/skycair-app-store/appimage-builder.sh "$CURRENTPACKAGE" "$FRIENDLYNAME" "$CATEGORY" "$APPLICATIONURL" "$VERSION" "$ACTIVATEMODULE")
 
 echo "$RESULT"

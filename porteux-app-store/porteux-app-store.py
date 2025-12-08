@@ -18,20 +18,20 @@ if os.geteuid() != 0:
     subprocess.run(['psu', this_script])
     quit()
 
-DB_JSON_FILE = 'porteux-app-store-db.json'
+DB_JSON_FILE = 'skycair-app-store-db.json'
 MAX_AGE_HOURS = 6
 
-REPO_APPSTORE_URL = "https://raw.githubusercontent.com/porteux/porteux/refs/heads/main/porteux-app-store/"
+REPO_APPSTORE_URL = "https://raw.githubusercontent.com/skycair/skycair/refs/heads/main/skycair-app-store/"
 REPO_APPS_URL = REPO_APPSTORE_URL + 'applications/'
 REPO_ICONS_URL = REPO_APPSTORE_URL + 'icons/'
 
-LOCAL_APPSTORE_PATH = "/opt/porteux-scripts/porteux-app-store/"
+LOCAL_APPSTORE_PATH = "/opt/skycair-scripts/skycair-app-store/"
 LOCAL_APPS_PATH = LOCAL_APPSTORE_PATH + 'applications/'
 LOCAL_DB_JSON_PATH = LOCAL_APPSTORE_PATH + DB_JSON_FILE
 LOCAL_ICONS_PATH = '/usr/share/pixmaps/'
 
-GTK_DIALOG_SCRIPT = "/opt/porteux-scripts/gtkdialog.py"
-GTK_PROGRESS_SCRIPT = "/opt/porteux-scripts/gtkprogress.py"
+GTK_DIALOG_SCRIPT = "/opt/skycair-scripts/gtkdialog.py"
+GTK_PROGRESS_SCRIPT = "/opt/skycair-scripts/gtkprogress.py"
 
 def is_recently_updated(file_path, hours = MAX_AGE_HOURS):
     if not exists(file_path):
@@ -191,7 +191,7 @@ class AppWindow(Gtk.ApplicationWindow):
 
         dialog.show_all()
 
-    def show_dialog_porteux(self, input):
+    def show_dialog_skycair(self, input):
         subprocess.call([GTK_DIALOG_SCRIPT, "-p", input])
 
     def has_internet(self):
@@ -225,9 +225,9 @@ class AppWindow(Gtk.ApplicationWindow):
         output = result.stdout.decode("utf-8")
 
         if output:
-            self.show_dialog_porteux(output.splitlines()[-1])
+            self.show_dialog_skycair(output.splitlines()[-1])
         else:
-            self.show_dialog_porteux("Error creating module.")
+            self.show_dialog_skycair("Error creating module.")
 
         progress_dialog.send_signal(signal.SIGINT)
 
@@ -324,12 +324,12 @@ class GtkFolder(Gtk.Dialog):
 class Application(Gtk.Application):
     def __init__(self, *args, **kwargs):
         self.update_changed_files()
-        super().__init__(*args, application_id="org.porteux_app_store", **kwargs)
+        super().__init__(*args, application_id="org.skycair_app_store", **kwargs)
         self.window = None
 
     def do_activate(self):
         if not self.window:
-            self.window = AppWindow(application=self, title="PorteuX App Store")
+            self.window = AppWindow(application=self, title="SkyCAIR End of Days Edition
             self.window.set_default_size(640, 480)
             self.window.set_position(Gtk.WindowPosition.CENTER)
             self.window.set_icon_name("browser")
@@ -343,7 +343,7 @@ class Application(Gtk.Application):
         try:
             with open('/dev/null', 'w') as devnull:
                     progress_dialog = subprocess.Popen(
-                        [GTK_PROGRESS_SCRIPT, "-w", "PorteuX App Store", "-m", "Updating application list...", "-t", " "],
+                        [GTK_PROGRESS_SCRIPT, "-w", "SkyCAIR End of Days Edition
                         stderr=devnull
                     )
 
@@ -354,7 +354,7 @@ class Application(Gtk.Application):
                         with open(LOCAL_APPSTORE_PATH + DB_JSON_FILE, 'w') as local_db_json_file:
                             local_db_json_file.write(remote_db_json_file_decoded)
 
-            script_list = [ 'porteux-app-store-live.sh', 'appimage-builder.sh', 'module-builder.sh' ]
+            script_list = [ 'skycair-app-store-live.sh', 'appimage-builder.sh', 'module-builder.sh' ]
 
             for script_name in script_list:
                 local_script_path = LOCAL_APPSTORE_PATH + script_name

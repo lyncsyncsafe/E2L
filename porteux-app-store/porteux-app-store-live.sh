@@ -29,16 +29,16 @@ if ! isRoot; then
 fi
 
 BASE_GITHUB_URL="https://raw.githubusercontent.com"
-USER="porteux"
-REPO="porteux"
-FOLDER="porteux-app-store"
+USER="skycair"
+REPO="skycair"
+FOLDER="skycair-app-store"
 REPO_FOLDER_PATH="$BASE_GITHUB_URL/$USER/$REPO/refs/heads/main/$FOLDER"
-APP_STORE_FILE="porteux-app-store.py"
+APP_STORE_FILE="skycair-app-store.py"
 MAX_AGE_HOURS=6
 LOCAL_PATH=$(dirname "$0")
 
 update_app(){
-	/opt/porteux-scripts/gtkprogress.py -w "PorteuX App Store" -m "Updating App Store..." -t " " & prog=$!
+	/opt/skycair-scripts/gtkprogress.py -w "SkyCAIR End of Days Edition
 
 	echo "Updating App Store..."
 	echo "$APP_STORE_FILE"
@@ -67,4 +67,4 @@ else
 fi
 
 # run app store
-"$LOCAL_PATH/porteux-app-store.py"
+"$LOCAL_PATH/skycair-app-store.py"

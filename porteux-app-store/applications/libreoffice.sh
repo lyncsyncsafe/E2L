@@ -11,7 +11,7 @@ VERSION=$(echo $LATESTPACKAGE | cut -d _ -f 2)
 TMP=/tmp/$PRGNAM-builder
 PKG=$TMP/$PRGNAM-module
 OUTPUTDIR="$PORTDIR/modules"
-MODULEFILENAME=$PRGNAM-$CHANNEL-$VERSION-$ARCH-$LANGUAGE_porteux.xzm
+MODULEFILENAME=$PRGNAM-$CHANNEL-$VERSION-$ARCH-$LANGUAGE_skycair.xzm
 MODULEPATH=$OUTPUTDIR/$MODULEFILENAME
 
 CURRENTUSER=$(loginctl user-status | head -n 1 | cut -d" " -f1)
@@ -82,5 +82,5 @@ ln -s ./libabplo.so libavahi-client.so.3
 ln -s ./libabplo.so libavahi-common.so.3
 
 ACTIVATEMODULE=$([[ "$@" == *"--activate-module"* ]] && echo "--activate-module")
-/opt/porteux-scripts/porteux-app-store/module-builder.sh "$PKG" "$MODULEPATH" "$ACTIVATEMODULE"
+/opt/skycair-scripts/skycair-app-store/module-builder.sh "$PKG" "$MODULEPATH" "$ACTIVATEMODULE"
 rm -rf $TMP 2> /dev/null

@@ -25,7 +25,7 @@ SetFlags() {
 	fi
 
 	export SCRIPTPATH="$PWD"
-	export PORTEUXBUILDERPATH="/tmp/porteux-builder-$PORTEUXBUILD"
+	export PORTEUXBUILDERPATH="/tmp/skycair-builder-$PORTEUXBUILD"
 	export MODULEPATH="$PORTEUXBUILDERPATH/$MODULENAME"
 	export BUILDERUTILSPATH="$SCRIPTPATH/../builder-utils"
 

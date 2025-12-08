@@ -14,10 +14,10 @@ mkdir -p "$BUILDDIR/usr/bin" || exit 1
 eval wget -T 15 "$APPLICATIONURL" -P "$BUILDDIR/usr/bin" || exit 1
 chmod 755 ${BUILDDIR}/usr/bin/* 2> /dev/null || exit 1
 
-MODULEFILENAME="$CURRENTPACKAGE-$VERSION-noarch_porteux.xzm"
+MODULEFILENAME="$CURRENTPACKAGE-$VERSION-noarch_skycair.xzm"
 ACTIVATEMODULE=$([[ "$@" == *"--activate-module"* ]] && echo "--activate-module")
 
-/opt/porteux-scripts/porteux-app-store/module-builder.sh "$MODULEDIR" "$OUTPUTDIR/$MODULEFILENAME" "$ACTIVATEMODULE"
+/opt/skycair-scripts/skycair-app-store/module-builder.sh "$MODULEDIR" "$OUTPUTDIR/$MODULEFILENAME" "$ACTIVATEMODULE"
 
 # cleanup
 rm -rf "$BUILDDIR" 2> /dev/null

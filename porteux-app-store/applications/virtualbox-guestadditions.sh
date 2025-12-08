@@ -60,8 +60,8 @@ rm -fr $MODULEDIR/opt/VBoxGuestAdditions-${CURRENTVERSION}/LICENSE
 
 # Build the xzm module
 KERNELVERSION=$(uname -r | awk -F- '{print$1}')
-MODULEFILENAME="$CURRENTPACKAGE-$CURRENTVERSION-k.$KERNELVERSION-${ARCH}_porteux.xzm"
-/opt/porteux-scripts/porteux-app-store/module-builder.sh "$MODULEDIR" "$OUTPUTDIR/$MODULEFILENAME"
+MODULEFILENAME="$CURRENTPACKAGE-$CURRENTVERSION-k.$KERNELVERSION-${ARCH}_skycair.xzm"
+/opt/skycair-scripts/skycair-app-store/module-builder.sh "$MODULEDIR" "$OUTPUTDIR/$MODULEFILENAME"
 
 # cleanup
 umount "$MOUNTDIR"

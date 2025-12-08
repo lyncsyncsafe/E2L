@@ -53,10 +53,10 @@ chmod 755 -R "$MODULEDIR" 2> /dev/null || exit 1
 chown -R guest: "$MODULEDIR/home/guest/"
 chmod 644 "$MODULEDIR"/home/guest/.local/share/applications/* 2> /dev/null || exit
 
-MODULEFILENAME="$CURRENTPACKAGE-$VERSION-${ARCH}_porteux.xzm"
+MODULEFILENAME="$CURRENTPACKAGE-$VERSION-${ARCH}_skycair.xzm"
 ACTIVATEMODULE=$([[ "$@" == *"--activate-module"* ]] && echo "--activate-module")
 
-/opt/porteux-scripts/porteux-app-store/module-builder.sh "$MODULEDIR" "$OUTPUTDIR/$MODULEFILENAME" "$ACTIVATEMODULE"
+/opt/skycair-scripts/skycair-app-store/module-builder.sh "$MODULEDIR" "$OUTPUTDIR/$MODULEFILENAME" "$ACTIVATEMODULE"
 
 # cleanup
 rm -fr "$BUILDDIR" 2> /dev/null

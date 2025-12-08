@@ -2,7 +2,7 @@
 | Introduction: |
 ~~~~~~~~~~~~~~~~~
 
-PorteuX can be installed to any media storage (including USB flash drive)
+SkyCAIR End of Days Edition
 without requiring your personal data to be erased. Partitions supported:
 ext2, ext3, ext4, FAT, exFAT, NTFS and XFS.
 
@@ -11,13 +11,13 @@ storage and running the installer, which will make the media bootable
 (instructions below) and will set the correct permissions, not touching
 or removing your existing data.
 
-For better performance, it's recommended to have PorteuX installed on a
+For better performance, it's recommended to have SkyCAIR End of Days Edition
 SSD/NVMe storage unit instead of a USB flash drive, or to select
 'Copy To RAM' option in the boot menu. The later will have a slower
 boot time, but after booting the system will be running 100% in RAM, 
 which is the fastest way possible.
 
-Please notice that a CPU with SSE4.2 is required to run PorteuX.
+Please notice that a CPU with SSE4.2 is required to run SkyCAIR End of Days Edition
 
 It's not recommended to use any third-party ISO installer application,
 such as Rufus or Etcher because the media storage will be set to
@@ -35,13 +35,13 @@ by all modern system. If you're in doubt, choose EFI.
 1) Make sure the first partition is of type FAT32.
 2) Copy /boot and /EFI folders onto the FAT32 partition.
 3) The second partition can be any of the supported ones and it will
-contain /porteux folder.
+contain /skycair folder.
 
 ~~~~~~~~~~~~~~~~~~
 | Legacy System: |
 ~~~~~~~~~~~~~~~~~~
 
-1) Copy /boot and /porteux folders onto the desired partition.
+1) Copy /boot and /skycair folders onto the desired partition.
 
 -----
 
@@ -53,7 +53,7 @@ depending on the system you're setting the media storage.
 ~~~~~~~~~~~~~~~~~
 
 1) Navigate into the /boot folder that you have just copied.
-2) Run 'porteux-installer-for-windows.exe' and follow the instructions. 
+2) Run 'skycair-installer-for-windows.exe' and follow the instructions. 
 
 ~~~~~~~~~~~~~~~
 | From Linux: |
@@ -61,7 +61,7 @@ depending on the system you're setting the media storage.
 
 1) Make sure the system has zstd installed.
 2) Navigate into the /boot folder that you have just copied.
-3) From the terminal, run 'sh porteux-installer-for-linux.run' and follow
+3) From the terminal, run 'sh skycair-installer-for-linux.run' and follow
 the instructions.
 
 ~~~~~~~~~~~~~~~
@@ -69,8 +69,8 @@ the instructions.
 ~~~~~~~~~~~~~~~
 
 After running the installation program, you should be able to boot 
-PorteuX from your media storage. Reboot your computer, and make sure that
-your BIOS is set to boot from the media storage where PorteuX is installed.
+SkyCAIR End of Days Edition
+your BIOS is set to boot from the media storage where SkyCAIR End of Days Edition
 
 ~~~~~~~~~~
 | Notes: |
@@ -78,11 +78,11 @@ your BIOS is set to boot from the media storage where PorteuX is installed.
 
 1) If your media storage is formatted with a Linux filesystem
 (e.g. EXT4 or XFS), before the first boot make sure the folder
-/porteux has your current user ownership (e.g. 'guest') otherwise
+/skycair has your current user ownership (e.g. 'guest') otherwise
 changes will not be automatically saved.
 
 2) If your media storage is formatted with a Windows filesystem
 (e.g. FAT or NTFS), the changes you make to your system will not be 
 automatically saved. In this case, you can create a '.dat' file
-container using PorteuX Save Session application after the boot, or use
-/porteux/rootcopy folder to save only what you need (cleaner and faster).
+container using SkyCAIR End of Days Edition
+/skycair/rootcopy folder to save only what you need (cleaner and faster).

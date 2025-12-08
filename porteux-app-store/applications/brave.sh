@@ -7,7 +7,7 @@ fi
 
 if [ `whoami` != root ]; then
     echo "Please enter root's password below:"
-    su -c "/opt/porteux-scripts/porteux-app-store/applications/brave.sh $1 $2 $3"
+    su -c "/opt/skycair-scripts/skycair-app-store/applications/brave.sh $1 $2 $3"
     exit 0
 fi
 
@@ -52,7 +52,7 @@ sed -i "s|Exec=|Exec=env LANGUAGE=${LANGUAGE} |g" "${MODULEDIR}/usr/share/applic
 
 striptease
 
-/opt/porteux-scripts/porteux-app-store/module-builder.sh "${MODULEDIR}" "${OUTPUTDIR}/${FRIENDLYPACKAGENAME}-${VERSION}-${ARCH}-${LANGUAGE}_porteux.xzm" "${ACTIVATEMODULE}"
+/opt/skycair-scripts/skycair-app-store/module-builder.sh "${MODULEDIR}" "${OUTPUTDIR}/${FRIENDLYPACKAGENAME}-${VERSION}-${ARCH}-${LANGUAGE}_skycair.xzm" "${ACTIVATEMODULE}"
 
 # cleanup
 rm -fr "${BUILDDIR}" 2> /dev/null

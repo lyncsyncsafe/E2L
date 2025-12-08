@@ -27,10 +27,10 @@ rm -fr "$MODULEDIR/usr/man"
 find "$MODULEDIR" -name '*.a' -delete
 find "$MODULEDIR" | xargs file | egrep ".exe|.dll" | cut -f 1 -d : | xargs strip -S --strip-unneeded --remove-section=.note.gnu.gold-version --remove-section=.comment --remove-section=.note --remove-section=.note.gnu.build-id --remove-section=.note.ABI-tag 2> /dev/null
 
-MODULEFILENAME="$CURRENTPACKAGE-$VERSION-${ARCH}_porteux.xzm"
+MODULEFILENAME="$CURRENTPACKAGE-$VERSION-${ARCH}_skycair.xzm"
 ACTIVATEMODULE=$([[ "$@" == *"--activate-module"* ]] && echo "--activate-module")
 
-/opt/porteux-scripts/porteux-app-store/module-builder.sh "$MODULEDIR" "$OUTPUTDIR/$MODULEFILENAME" "$ACTIVATEMODULE"
+/opt/skycair-scripts/skycair-app-store/module-builder.sh "$MODULEDIR" "$OUTPUTDIR/$MODULEFILENAME" "$ACTIVATEMODULE"
 
 # cleanup
 rm -fr $BUILDDIR

@@ -85,9 +85,9 @@ chown root:root $MODULEDIR/opt/VirtualBox/VirtualBox
 chmod -s $MODULEDIR/opt/VirtualBox/VirtualBox
 chmod +s $MODULEDIR/opt/VirtualBox/VirtualBoxVM
 KERNELVERSION=$(uname -r | awk -F- '{print$1}')
-MODULEFILENAME="$CURRENTPACKAGE-$CURRENTVERSION-k.$KERNELVERSION-${ARCH}_porteux.xzm"
+MODULEFILENAME="$CURRENTPACKAGE-$CURRENTVERSION-k.$KERNELVERSION-${ARCH}_skycair.xzm"
 ACTIVATEMODULE=$([[ "$@" == *"--activate-module"* ]] && echo "--activate-module")
-/opt/porteux-scripts/porteux-app-store/module-builder.sh "$MODULEDIR" "$OUTPUTDIR/$MODULEFILENAME" "$ACTIVATEMODULE"
+/opt/skycair-scripts/skycair-app-store/module-builder.sh "$MODULEDIR" "$OUTPUTDIR/$MODULEFILENAME" "$ACTIVATEMODULE"
 
 # cleanup
 rm -fr "$BUILDDIR"

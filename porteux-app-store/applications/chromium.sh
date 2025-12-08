@@ -7,7 +7,7 @@ fi
 
 if [ `whoami` != root ]; then
     echo "Please enter root's password below:"
-    su -c "/opt/porteux-scripts/porteux-app-store/applications/chromium.sh $1 $2 $3"
+    su -c "/opt/skycair-scripts/skycair-app-store/applications/chromium.sh $1 $2 $3"
     exit 0
 fi
 
@@ -66,13 +66,13 @@ get_module_name(){
     local pkgver; pkgver="$2"
     local arch; arch="$3"
 
-    echo "${APP}-${CHANNEL}-${pkgver}-${arch}-${LANGUAGE}_porteux"
+    echo "${APP}-${CHANNEL}-${pkgver}-${arch}-${LANGUAGE}_skycair"
 }
 
 finisher(){
     striptease "$APP" "$1"
 
-    /opt/porteux-scripts/porteux-app-store/module-builder.sh $TMP/"$APP"/"$1" "$TARGET_DIR/${1}.xzm" "$ACTIVATEMODULE" || exit 1
+    /opt/skycair-scripts/skycair-app-store/module-builder.sh $TMP/"$APP"/"$1" "$TARGET_DIR/${1}.xzm" "$ACTIVATEMODULE" || exit 1
     remove_application_temp_dir "$APP" "$2"
 }
 

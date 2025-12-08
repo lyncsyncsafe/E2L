@@ -17,13 +17,13 @@ export USER_PWD
 ARCHIVE_DIR=`dirname "$0"`
 export ARCHIVE_DIR
 
-label="PorteuX Installer"
+label="SkyCAIR End of Days Edition
 script="./installer.sh"
 scriptargs="$PWD"
 cleanup_script=""
 licensetxt=""
 helpheader=""
-targetdir="/tmp/porteux-installer"
+targetdir="/tmp/skycair-installer"
 filesizes="174651"
 totalsize="174651"
 keep="y"
@@ -385,10 +385,10 @@ do
     \"8\" \\
     \"--chown\" \\
     \"--target\" \\
-    \"/tmp/porteux-installer\" \\
+    \"/tmp/skycair-installer\" \\
     \"build\" \\
-    \"porteux-installer-for-linux.run\" \\
-    \"PorteuX Installer\" \\
+    \"skycair-installer-for-linux.run\" \\
+    \"SkyCAIR End of Days Edition
     \"./installer.sh\" \\
     \"$PWD\""
 	if test x"$script" != x; then
@@ -413,7 +413,7 @@ do
 	echo SCRIPT=\"$script\"
 	echo SCRIPTARGS=\"$scriptargs\"
     echo CLEANUPSCRIPT=\"$cleanup_script\"
-	echo archdirname=\"/tmp/porteux-installer\"
+	echo archdirname=\"/tmp/skycair-installer\"
 	echo KEEP=y
 	echo NOOVERWRITE=n
 	echo COMPRESS=zstd
